@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Zone Number</th>
+        <th>Min</th>
+        <th>MAx</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="species:${species}">
+        <td th:text="${species.latinName}">_latin_</td>
+        <td th:text="${species.engName}">_english_</td>
+        <td th:text="${species.nedName}">_dutch_</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
